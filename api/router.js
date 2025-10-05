@@ -646,6 +646,7 @@ const catalogData = [
       thumbnail: "https://m.media-amazon.com/images/M/MV5BMjMxYTNlY2MtMzY1NC00NzRhLWEzNTItZmQ1NDcyZDhlZmMxXkEyXkFqcGc@._V1_.jpg",
       stream: "https://pulse.topstrime.online/tv/119051/zfm5xe/S2/E1/master.m3u8"
     }
+     ]
     }
   },
 
