@@ -541,28 +541,108 @@ const catalogData = [
     catalog: "netflix"
   },
   {
-    id: "tt1190634",
+    id: "tt13443470",
     type: "series",
-    name: "The Boys",
-    poster: fetchPosterFromIMDb("tt1190634"),
-    background: fetchBackgroundFromIMDb("tt1190634"),
-    logo: fetchLogoFromIMDb("tt1190634"),
-    description: "Une équipe de justiciers qui entreprend d'abattre des super-héros corrompus qui abusent de leurs pouvoirs.",
-    genres: ["Action", "Comedy", "Crime"],
-    releaseInfo: "2019-",
-    imdbRating: "8.7",
+    name: "Mercredi",
+    poster: fetchPosterFromIMDb("tt13443470"),
+    background: fetchBackgroundFromIMDb("tt13443470"),
+    logo: fetchLogoFromIMDb("tt13443470"),
+    description: "Suit les années d'études de Mercredi Addams, alors qu'elle tente de maîtriser ses nouvelles capacités psychiques, de déjouer et de résoudre le mystère qui a impliqué ses parents.",
+    genres: ["Action", "Comedy", "Fantastic"],
+    releaseInfo: "2022-",
+    imdbRating: "8.0",
     catalog: "netflix",
     episodes: {
       1: [
         {
-          id: "tt1190634:1:1",
-          title: "The Name of the Game",
+          id: "tt13443470:1:1",
+          title: "Mercredi",
           season: 1,
           episode: 1,
-          overview: "Premier épisode de la saison 1",
-          released: "2019-07-26T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt1190634"),
-          stream: "https://pulse.topstrime.online/tv/76479/1/1/82nb0j/master.m3u8"
+          overview: "Lorsqu'une farce délicieusement méchante fait renvoyer Mercredi, ses parents l'envoient à l'Académie Nevermore, le pensionnat où ils sont tombés amoureux.",
+          released: "2022-11-23T00:00:00.000Z",
+          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          stream: "https://pulse.topstrime.online/tv/119051/rdxfvx/S1/E1/master.m3u8"
+        },
+        {
+          id: "tt13443470:1:2",
+          title: "Mercredi",
+          season: 1,
+          episode: 2,
+          overview: "Le shérif interroge Mercredi sur les événements étranges de la nuit. Plus tard, Mercredi est confronté à un rival féroce dans la course à la Poe Cup.",
+          released: "2022-11-23T00:00:00.000Z",
+          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          stream: "https://pulse.topstrime.online/tv/119051/rblyo2/S1/E2/master.m3u8"
+        },
+        {
+          id: "tt13443470:1:3",
+          title: "Mercredi",
+          season: 1,
+          episode: 3,
+          overview: "Mercredi découvre par hasard une société secrète. Pendant la journée de sensibilisation, les exclus de Nevermore se mêlent aux normies de Jéricho dans le monde des pèlerins.",
+          released: "2022-11-23T00:00:00.000Z",
+          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          stream: "https://pulse.topstrime.online/tv/119051/v3vqw4/S1/E3/master.m3u8"
+        },
+        {
+          id: "tt13443470:1:4",
+          title: "Mercredi",
+          season: 1,
+          episode: 4,
+          overview: "Mercredi invite Xavier au bal de la Rave'N, suscitant la jalousie de Tyler - mais la Chose a quelque chose dans sa manche. Pendant ce temps, Eugène surveille la grotte.",
+          released: "2022-11-23T00:00:00.000Z",
+          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          stream: "https://pulse.topstrime.online/tv/119051/y080h1/S1/E4/master.m3u8"
+        },
+        {
+          id: "tt13443470:1:5",
+          title: "Mercredi",
+          season: 1,
+          episode: 5,
+          overview: "Pendant le week-end des parents, Mercredi fouille dans le passé de sa famille - et fait accidentellement arrêter son père. Enid ressent la pression de devenir un loup.",
+          released: "2022-11-23T00:00:00.000Z",
+          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          stream: "https://pulse.topstrime.online/tv/119051/feqros/S1/E5/master.m3u8"
+        },
+        {
+          id: "tt13443470:1:6",
+          title: "Mercredi",
+          season: 1,
+          episode: 6,
+          overview: "Les amis de Mercredi lui organisent une fête d'anniversaire surprise. Ils veulent bien faire, mais elle préférerait marquer cette triste occasion en résolvant les meurtres.",
+          released: "2022-11-23T00:00:00.000Z",
+          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          stream: "https://pulse.topstrime.online/tv/119051/4f0xlr/S1/E6/master.m3u8"
+        },
+        {
+          id: "tt13443470:1:7",
+          title: "Mercredi",
+          season: 1,
+          episode: 7,
+          overview: "L'excentrique oncle Fester lui rend visite et partage sa théorie sur le monstre. Mercredi accepte à contrecoeur un rendez-vous avec Tyler dans la crypte de Crackstone.",
+          released: "2022-11-23T00:00:00.000Z",
+          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          stream: "https://pulse.topstrime.online/tv/119051/lt5pvl/S1/E7/master.m3u8"
+        },
+        {
+          id: "tt13443470:1:8",
+          title: "Mercredi",
+          season: 1,
+          episode: 8,
+          overview: "Mercredi a des ennuis avec le principal Weems, mais ce n'est que le début de ses problèmes. Pour combattre un mal ancien, elle aura besoin de l'aide de tous ses amis.",
+          released: "2022-11-23T00:00:00.000Z",
+          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          stream: "https://pulse.topstrime.online/tv/119051/cya5bi/S1/E8/master.m3u8"
+        },
+        {
+          id: "tt13443470:2:1",
+          title: "Mercredi",
+          season: 2,
+          episode: 1,
+          overview: "Après des vacances d'été productives, une Mercredi maussade retrouve Nevermore, auréolée malgré elle du statut d'héroïne et cible d'un regard malveillant et harceleur.",
+          released: "2025-08-06T00:00:00.000Z",
+          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          stream: "https://pulse.topstrime.online/tv/119051/zfm5xe/S2/E1/master.m3u8"
         }
       ]
     }
