@@ -527,17 +527,17 @@ const catalogData = [
 
   // === NETFLIX ===
   {
-    id: "tt15398776",
+    id: "tt35300972",
     type: "movie",
-    name: "Oppenheimer",
-    poster: fetchPosterFromIMDb("tt15398776"),
-    background: fetchBackgroundFromIMDb("tt15398776"),
-    logo: fetchLogoFromIMDb("tt15398776"),
-    description: "L'histoire du physicien J. Robert Oppenheimer et de son rôle dans le développement de la bombe atomique.",
-    genres: ["Biography", "Drama", "History"],
-    releaseInfo: "2023",
-    imdbRating: "8.3",
-    stream: "https://pulse.topstrime.online/movie/872585/82nb0j/master.m3u8",
+    name: "Lune de miel avec ma mère",
+    poster: fetchPosterFromIMDb("tt35300972"),
+    background: fetchBackgroundFromIMDb("tt35300972"),
+    logo: fetchLogoFromIMDb("tt35300972"),
+    description: "Lorsque sa fiancée le jette sur l'autel pour son ex, un jeune homme n'a d'autre choix que de partir en lune de miel romantique avec sa mère.",
+    genres: ["Comedy"],
+    releaseInfo: "2025",
+    imdbRating: "5.6",
+    stream: "https://pulse.topstrime.online/movie/1361622/o4rzet/master.m3u8",
     catalog: "netflix"
   },
   {
@@ -613,17 +613,17 @@ const catalogData = [
 
   // === DISNEY+ ===
   {
-    id: "tt10872600",
+    id: "tt20969586",
     type: "movie",
-    name: "Spider-Man: No Way Home",
-    poster: fetchPosterFromIMDb("tt10872600"),
-    background: fetchBackgroundFromIMDb("tt10872600"),
-    logo: fetchLogoFromIMDb("tt10872600"),
-    description: "Avec son identité révélée, Peter Parker demande l'aide de Doctor Strange pour restaurer son secret.",
+    name: "Thunderbolt",
+    poster: fetchPosterFromIMDb("tt20969586"),
+    background: fetchBackgroundFromIMDb("tt20969586"),
+    logo: fetchLogoFromIMDb("tt20969586"),
+    description: "Un monde sans Avengers ne signifie pas qu'il n'y a pas de groupe de super-héros. Il y a un groupe et ils s'appellent les Thunderbolts.",
     genres: ["Action", "Adventure", "Fantasy"],
-    releaseInfo: "2021",
-    imdbRating: "8.2",
-    stream: "https://pulse.topstrime.online/movie/634649/82nb0j/master.m3u8",
+    releaseInfo: "2025",
+    imdbRating: "7.1",
+    stream: "https://pulse.topstrime.online/movie/986056/82nb0j/master.m3u8",
     catalog: "disney"
   },
   {
