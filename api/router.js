@@ -895,18 +895,32 @@ export default function handler(req, res) {
     return sendJSON(res, manifest);
   }
 
-  // Route: /catalog/:type/:catalogId.json
+  // Route: /catalog/:type/:catalogId.json or /catalog/:type/:catalogId/:extra.json
   if (parts[0] === 'catalog' && parts.length >= 3) {
     const catalogType = parts[1];
     const catalogId = stripJson(parts[2]);
 
-    console.log('Catalog request - Type:', catalogType, 'ID:', catalogId);
+    // Parse extra parameters (genre filter)
+    let genreFilter = null;
+    if (parts.length >= 4) {
+      const extraParams = stripJson(parts[3]);
+      const extraMatch = extraParams.match(/genre=([^&]+)/);
+      if (extraMatch) {
+        genreFilter = decodeURIComponent(extraMatch[1]);
+      }
+    }
+
+    console.log('Catalog request - Type:', catalogType, 'ID:', catalogId, 'Genre:', genreFilter);
 
     let metas = [];
 
     if (catalogId === 'directhls_series') {
       metas = catalogData
-        .filter(item => item.type === 'series' && !item.catalog)
+        .filter(item => {
+          if (item.type !== 'series' || item.catalog) return false;
+          if (genreFilter && !item.genres.includes(genreFilter)) return false;
+          return true;
+        })
         .map(item => ({
           id: item.id,
           type: item.type,
@@ -923,7 +937,11 @@ export default function handler(req, res) {
     } else if (catalogId.includes('_movies')) {
       const platform = catalogId.replace('_movies', '');
       metas = catalogData
-        .filter(item => item.type === 'movie' && item.catalog === platform)
+        .filter(item => {
+          if (item.type !== 'movie' || item.catalog !== platform) return false;
+          if (genreFilter && !item.genres.includes(genreFilter)) return false;
+          return true;
+        })
         .map(item => ({
           id: item.id,
           type: item.type,
@@ -940,7 +958,11 @@ export default function handler(req, res) {
     } else if (catalogId.includes('_series')) {
       const platform = catalogId.replace('_series', '');
       metas = catalogData
-        .filter(item => item.type === 'series' && item.catalog === platform)
+        .filter(item => {
+          if (item.type !== 'series' || item.catalog !== platform) return false;
+          if (genreFilter && !item.genres.includes(genreFilter)) return false;
+          return true;
+        })
         .map(item => ({
           id: item.id,
           type: item.type,
