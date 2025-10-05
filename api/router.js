@@ -19,6 +19,14 @@ function fetchPosterFromIMDb(id) {
   return `https://images.metahub.space/poster/small/${id}/img`;
 }
 
+function fetchLogoFromIMDb(id) {
+  return `https://images.metahub.space/logo/medium/${id}/img`;
+}
+
+function fetchBackgroundFromIMDb(id) {
+  return `https://images.metahub.space/background/medium/${id}/img`;
+}
+
 // === Catalogue ===
 const catalogData = [
   {
@@ -523,8 +531,8 @@ const catalogData = [
     type: "movie",
     name: "Oppenheimer",
     poster: fetchPosterFromIMDb("tt15398776"),
-    background: "https://4kwallpapers.com/images/wallpapers/oppenheimer-8k-2023-3840x2160-12220.jpg",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Oppenheimer_Movie_Logo_2023.png",
+    background: fetchBackgroundFromIMDb("tt15398776"),
+    logo: fetchLogoFromIMDb("tt15398776"),
     description: "L'histoire du physicien J. Robert Oppenheimer et de son rôle dans le développement de la bombe atomique.",
     genres: ["Biography", "Drama", "History"],
     releaseInfo: "2023",
@@ -537,7 +545,8 @@ const catalogData = [
     type: "series",
     name: "The Boys",
     poster: fetchPosterFromIMDb("tt1190634"),
-    background: fetchPosterFromIMDb("tt1190634"),
+    background: fetchBackgroundFromIMDb("tt1190634"),
+    logo: fetchLogoFromIMDb("tt1190634"),
     description: "Une équipe de justiciers qui entreprend d'abattre des super-héros corrompus qui abusent de leurs pouvoirs.",
     genres: ["Action", "Comedy", "Crime"],
     releaseInfo: "2019-",
@@ -565,7 +574,8 @@ const catalogData = [
     type: "movie",
     name: "The Batman",
     poster: fetchPosterFromIMDb("tt1877830"),
-    background: fetchPosterFromIMDb("tt1877830"),
+    background: fetchBackgroundFromIMDb("tt1877830"),
+    logo: fetchLogoFromIMDb("tt1877830"),
     description: "Lorsque le Riddler, un tueur sadique, commence à assassiner des personnalités politiques clés de Gotham, Batman est contraint d'enquêter sur la corruption de la ville.",
     genres: ["Action", "Crime", "Drama"],
     releaseInfo: "2022",
@@ -578,7 +588,8 @@ const catalogData = [
     type: "series",
     name: "Game of Thrones",
     poster: fetchPosterFromIMDb("tt0944947"),
-    background: fetchPosterFromIMDb("tt0944947"),
+    background: fetchBackgroundFromIMDb("tt0944947"),
+    logo: fetchLogoFromIMDb("tt0944947"),
     description: "Neuf familles nobles se battent pour le contrôle des terres mythiques de Westeros, tandis qu'un ancien ennemi revient après avoir été endormi pendant des millénaires.",
     genres: ["Action", "Adventure", "Drama"],
     releaseInfo: "2011-2019",
@@ -606,7 +617,8 @@ const catalogData = [
     type: "movie",
     name: "Spider-Man: No Way Home",
     poster: fetchPosterFromIMDb("tt10872600"),
-    background: fetchPosterFromIMDb("tt10872600"),
+    background: fetchBackgroundFromIMDb("tt10872600"),
+    logo: fetchLogoFromIMDb("tt10872600"),
     description: "Avec son identité révélée, Peter Parker demande l'aide de Doctor Strange pour restaurer son secret.",
     genres: ["Action", "Adventure", "Fantasy"],
     releaseInfo: "2021",
@@ -619,7 +631,8 @@ const catalogData = [
     type: "series",
     name: "WandaVision",
     poster: fetchPosterFromIMDb("tt9140560"),
-    background: fetchPosterFromIMDb("tt9140560"),
+    background: fetchBackgroundFromIMDb("tt9140560"),
+    logo: fetchLogoFromIMDb("tt9140560"),
     description: "Série mêlant sitcoms classiques et univers cinématographique Marvel dans laquelle Wanda Maximoff et Vision vivent une vie de banlieue idyllique.",
     genres: ["Action", "Comedy", "Drama"],
     releaseInfo: "2021",
@@ -647,7 +660,8 @@ const catalogData = [
     type: "movie",
     name: "Tenet",
     poster: fetchPosterFromIMDb("tt6723592"),
-    background: fetchPosterFromIMDb("tt6723592"),
+    background: fetchBackgroundFromIMDb("tt6723592"),
+    logo: fetchLogoFromIMDb("tt6723592"),
     description: "Un agent secret reçoit une mission mystérieuse impliquant l'inversion temporelle pour prévenir la Troisième Guerre mondiale.",
     genres: ["Action", "Sci-Fi", "Thriller"],
     releaseInfo: "2020",
@@ -660,7 +674,8 @@ const catalogData = [
     type: "series",
     name: "Ted Lasso",
     poster: fetchPosterFromIMDb("tt10234724"),
-    background: fetchPosterFromIMDb("tt10234724"),
+    background: fetchBackgroundFromIMDb("tt10234724"),
+    logo: fetchLogoFromIMDb("tt10234724"),
     description: "Un entraîneur de football américain est embauché pour diriger une équipe de football britannique, malgré son absence totale d'expérience.",
     genres: ["Comedy", "Drama", "Sport"],
     releaseInfo: "2020-2023",
@@ -688,7 +703,8 @@ const catalogData = [
     type: "movie",
     name: "Dune",
     poster: fetchPosterFromIMDb("tt1160419"),
-    background: fetchPosterFromIMDb("tt1160419"),
+    background: fetchBackgroundFromIMDb("tt1160419"),
+    logo: fetchLogoFromIMDb("tt1160419"),
     description: "Paul Atreides, jeune homme aussi doué que brillant, est destiné à connaître un destin hors du commun.",
     genres: ["Action", "Adventure", "Drama"],
     releaseInfo: "2021",
@@ -701,7 +717,8 @@ const catalogData = [
     type: "series",
     name: "Rick and Morty",
     poster: fetchPosterFromIMDb("tt2861424"),
-    background: fetchPosterFromIMDb("tt2861424"),
+    background: fetchBackgroundFromIMDb("tt2861424"),
+    logo: fetchLogoFromIMDb("tt2861424"),
     description: "Un génie alcoolique et son petit-fils pas très futé embarquent dans des aventures inter-dimensionnelles.",
     genres: ["Animation", "Adventure", "Comedy"],
     releaseInfo: "2013-",
@@ -729,7 +746,8 @@ const catalogData = [
     type: "movie",
     name: "Inception",
     poster: fetchPosterFromIMDb("tt1375666"),
-    background: fetchPosterFromIMDb("tt1375666"),
+    background: fetchBackgroundFromIMDb("tt1375666"),
+    logo: fetchLogoFromIMDb("tt1375666"),
     description: "Un voleur qui s'introduit dans les rêves pour voler des secrets se voit confier la mission inverse : implanter une idée.",
     genres: ["Action", "Sci-Fi", "Thriller"],
     releaseInfo: "2010",
@@ -742,7 +760,8 @@ const catalogData = [
     type: "series",
     name: "Breaking Bad",
     poster: fetchPosterFromIMDb("tt0903747"),
-    background: fetchPosterFromIMDb("tt0903747"),
+    background: fetchBackgroundFromIMDb("tt0903747"),
+    logo: fetchLogoFromIMDb("tt0903747"),
     description: "Un professeur de chimie atteint d'un cancer se lance dans la fabrication de méthamphétamine pour assurer l'avenir financier de sa famille.",
     genres: ["Crime", "Drama", "Thriller"],
     releaseInfo: "2008-2013",
@@ -914,6 +933,7 @@ export default function handler(req, res) {
           description: item.description,
           genres: item.genres,
           background: item.background,
+          logo: item.logo,
           releaseInfo: item.releaseInfo,
           imdbRating: item.imdbRating
         }));
@@ -930,6 +950,7 @@ export default function handler(req, res) {
           description: item.description,
           genres: item.genres,
           background: item.background,
+          logo: item.logo,
           releaseInfo: item.releaseInfo,
           imdbRating: item.imdbRating
         }));
@@ -995,6 +1016,7 @@ export default function handler(req, res) {
         name: item.name,
         poster: item.poster,
         background: item.background,
+        logo: item.logo,
         description: item.description,
         genres: item.genres,
         releaseInfo: item.releaseInfo,
