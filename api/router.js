@@ -633,18 +633,19 @@ const catalogData = [
           released: "2022-11-23T00:00:00.000Z",
           thumbnail: fetchPosterFromIMDb("tt13443470"),
           stream: "https://pulse.topstrime.online/tv/119051/cya5bi/S1/E8/master.m3u8"
-        },
-        {
-          id: "tt13443470:2:1",
-          title: "Mercredi",
-          season: 2,
-          episode: 1,
-          overview: "Après des vacances d'été productives, une Mercredi maussade retrouve Nevermore, auréolée malgré elle du statut d'héroïne et cible d'un regard malveillant et harceleur.",
-          released: "2025-08-06T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt13443470"),
-          stream: "https://pulse.topstrime.online/tv/119051/zfm5xe/S2/E1/master.m3u8"
         }
-      ]
+      ],
+  2: [
+    {
+      id: "tt13443470:2:1",
+      title: "Mercredi",
+      season: 2,
+      episode: 1,
+      overview: "Après des vacances d'été productives, une Mercredi maussade retrouve Nevermore, auréolée malgré elle du statut d'héroïne et cible d'un regard malveillant et harceleur.",
+      released: "2025-08-06T00:00:00.000Z",
+      thumbnail: "https://m.media-amazon.com/images/M/MV5BMjMxYTNlY2MtMzY1NC00NzRhLWEzNTItZmQ1NDcyZDhlZmMxXkEyXkFqcGc@._V1_.jpg",
+      stream: "https://pulse.topstrime.online/tv/119051/zfm5xe/S2/E1/master.m3u8"
+    }
     }
   },
 
