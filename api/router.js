@@ -486,6 +486,16 @@ const catalogData = [
           released: "2025-10-07T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-43-du-7-octobre-2025-83224339-1759129415-ec11e0-3d50fc-0@3x.jpg",
           stream: "https://lambent-cranachan-48dfa7.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:44",
+          title: "Épisode 44",
+          season: 10,
+          episode: 44,
+          overview: "Épisode 44 de la saison 10",
+          released: "2025-10-08T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-44-du-8-octobre-2025-83607981-1759734236-8b77a3-a6ad4e-0@3x.jpg",
+          stream: "https://rococo-gumdrop-433480.netlify.app/master.m3u8"
         }
       ]
     }
