@@ -28,7 +28,7 @@ function fetchBackgroundFromIMDb(id) {
 }
 
 function fetchEpisodeThumbnail(seriesId, season, episode) {
-  return `https://images.metahub.space/episode/medium/${seriesId}/${season}/${episode}/img`;
+  return `https://episodes.metahub.space/${seriesId}/${season}/${episode}/w780.jpg`;
 }
 
 // === Catalogue ===
