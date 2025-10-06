@@ -555,6 +555,20 @@ const catalogData = [
     catalog: "netflix"
   },
   {
+    id: "tt3421514",
+    type: "movie",
+    name: "Supercondriaque",
+    poster: fetchPosterFromIMDb("tt3421514"),
+    background: fetchBackgroundFromIMDb("tt3421514"),
+    logo: fetchLogoFromIMDb("tt3421514"),
+    description: "Le besoin frénétique de propreté d'un hypocondriaque déchaîné est mis à rude épreuve lorsqu'il est pris pour un héros de guerre se préparant à la révolution.",
+    genres: ["Comedy"],
+    releaseInfo: "2014",
+    imdbRating: "6.0",
+    stream: "https://gentle-stroopwafel-f8eef0.netlify.app/master.m3u8",
+    catalog: "netflix"
+  },
+  {
     id: "tt27675583",
     type: "movie",
     name: "Almost Cops",
