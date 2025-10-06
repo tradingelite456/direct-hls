@@ -659,7 +659,77 @@ const catalogData = [
       released: "2025-08-06T00:00:00.000Z",
       thumbnail: fetchEpisodeThumbnail("tt13443470", 2, 1),
       stream: "https://pulse.topstrime.online/tv/119051/zfm5xe/S2/E1/master.m3u8"
-    }
+    },
+        {
+          id: "tt13443470:2:2",
+          title: "Mercredi",
+          season: 2,
+          episode: 2,
+          overview: "Le chaos règne sur le campus alors que Nevermore célèbre sa journée annuelle de farces; mercredi affronte un vieil ennemi et gagne un allié indésirable.",
+          released: "2025-08-06T00:00:00.000Z",
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 2, 2),
+          stream: "https://pulse.topstrime.online/tv/119051/musbbc/S2/E2/master.m3u8"
+        },
+        {
+          id: "tt13443470:2:3",
+          title: "Mercredi",
+          season: 2,
+          episode: 3,
+          overview: "Dépouillée de ses capacités et du livre de Goody, Mercredi est obligée de faire un travail de détective à l'ancienne lors d'un voyage de camping scolaire.",
+          released: "2025-08-06T00:00:00.000Z",
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 2, 3),
+          stream: "https://pulse.topstrime.online/tv/119051/fihpzg/S2/E3/master.m3u8"
+        },
+        {
+          id: "tt13443470:2:4",
+          title: "Mercredi",
+          season: 2,
+          episode: 4,
+          overview: "Fester et Thing s'engagent dans l'affaire de mercredi ; en essayant de cacher un secret, Bianca tombe sur un autre.",
+          released: "2025-08-06T00:00:00.000Z",
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 2, 4),
+          stream: "https://pulse.topstrime.online/tv/119051/zh7ine/S2/E4/master.m3u8"
+        },
+        {
+          id: "tt13443470:2:5",
+          title: "Mercredi",
+          season: 2,
+          episode: 5,
+          overview: "Wednesday Addams enquête sur des mystères à l'école Nevermore tout en gérant ses relations familiales complexes.",
+          released: "2025-09-03T00:00:00.000Z",
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 2, 5),
+          stream: "https://pulse.topstrime.online/tv/119051/g0bs80/S2/E5/master.m3u8"
+        },
+        {
+          id: "tt13443470:2:6",
+          title: "Mercredi",
+          season: 2,
+          episode: 6,
+          overview: "Une rencontre avec un esprit du passé de Nevermore donne à Wednesday et Enid une nouvelle perspective l'un sur l'autre - et met l'un de leurs camarades de classe en danger.",
+          released: "2025-09-03T00:00:00.000Z",
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 2, 6),
+          stream: "https://pulse.topstrime.online/tv/119051/d6g8kc/S2/E6/master.m3u8"
+        },
+        {
+          id: "tt13443470:2:7",
+          title: "Mercredi",
+          season: 2,
+          episode: 7,
+          overview: "Alors que le gala de l'école approche, mercredi déterre des informations sur Dort, Enid essaie de ne pas se laisser distancer et Morticia s'engage dans une bataille de volontés avec Grand-mère.",
+          released: "2025-09-03T00:00:00.000Z",
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 2, 7),
+          stream: "https://pulse.topstrime.online/tv/119051/p7tzot/S2/E7/master.m3u8"
+        },
+        {
+          id: "tt13443470:2:8",
+          title: "Mercredi",
+          season: 2,
+          episode: 8,
+          overview: "Lorsque des secrets de famille enfouis sont découverts, Mercredi doit courir contre la montre pour empêcher qu'une sombre prophétie ne se réalise.",
+          released: "2025-09-03T00:00:00.000Z",
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 2, 8),
+          stream: "https://pulse.topstrime.online/tv/119051/m15l7h/S2/E8/master.m3u8"
+        }
      ]
     }
   },
