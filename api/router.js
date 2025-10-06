@@ -657,7 +657,7 @@ const catalogData = [
       episode: 1,
       overview: "Après des vacances d'été productives, une Mercredi maussade retrouve Nevermore, auréolée malgré elle du statut d'héroïne et cible d'un regard malveillant et harceleur.",
       released: "2025-08-06T00:00:00.000Z",
-      thumbnail: "https://m.media-amazon.com/images/M/MV5BMjMxYTNlY2MtMzY1NC00NzRhLWEzNTItZmQ1NDcyZDhlZmMxXkEyXkFqcGc@._V1_.jpg",
+      thumbnail: fetchEpisodeThumbnail("tt13443470", 2, 1),
       stream: "https://pulse.topstrime.online/tv/119051/zfm5xe/S2/E1/master.m3u8"
     }
      ]
