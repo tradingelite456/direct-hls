@@ -904,6 +904,48 @@ const catalogData = [
     catalog: "prime"
   },
   {
+    id: "tt15004066",
+    type: "movie",
+    name: "Atoman",
+    poster: fetchPosterFromIMDb("tt15004066"),
+    background: fetchBackgroundFromIMDb("tt15004066"),
+    logo: fetchLogoFromIMDb("tt15004066"),
+    description: "Un astrolabe mystique doté du pouvoir de détruire le monde est volé dans la cité perdue d'Atlantis, située dans les montagnes de l'Atlas. Un homme, derniers descendants des Atlantes doit empêcher le cataclysme imminent.",
+    genres: ["Action"],
+    releaseInfo: "2025",
+    imdbRating: "1.8",
+    stream: "https://pulse.topstrime.online/movie/869048/inhwy5/master.m3u8",
+    catalog: "prime"
+  },
+   {
+    id: "tt30017619",
+    type: "movie",
+    name: "Les Bad Guys 2",
+    poster: fetchPosterFromIMDb("tt30017619"),
+    background: fetchBackgroundFromIMDb("tt30017619"),
+    logo: fetchLogoFromIMDb("tt30017619"),
+    description: "Les criminels animaliers s'efforcent de se faire à leur nouvelle vie de gentils. Bientôt, ils sont tirés de leur retraite et forcés de faire un dernier travail par une équipe entièrement féminine..",
+    genres: ["Anime"],
+    releaseInfo: "2025",
+    imdbRating: "7.1",
+    stream: "https://pulse.topstrime.online/movie/1175942/9504aw/master.m3u8",
+    catalog: "prime"
+  },
+   {
+    id: "tt31176520",
+    type: "movie",
+    name: "Eddington",
+    poster: fetchPosterFromIMDb("tt31176520"),
+    background: fetchBackgroundFromIMDb("tt31176520"),
+    logo: fetchLogoFromIMDb("tt31176520"),
+    description: "En mai 2020, un affrontement entre le shérif et le maire d'une petite ville met le feu aux poudres et fait se dresser les voisins les uns contre les autres à Eddington, au Nouveau-Mexique.",
+    genres: ["Drama"],
+    releaseInfo: "2025",
+    imdbRating: "6.7",
+    stream: "https://pulse.topstrime.online/movie/648878/p5l1ku/master.m3u8",
+    catalog: "prime"
+  },
+  {
     id: "tt0944947",
     type: "series",
     name: "Game of Thrones",
@@ -946,6 +988,20 @@ const catalogData = [
     stream: "https://pulse.topstrime.online/movie/986056/82nb0j/master.m3u8",
     catalog: "disney"
   },
+    {
+    id: "tt4900148",
+    type: "movie",
+    name: "Elio",
+    poster: fetchPosterFromIMDb("tt4900148"),
+    background: fetchBackgroundFromIMDb("tt4900148"),
+    logo: fetchLogoFromIMDb("tt4900148"),
+    description: "Elio a du mal à s'intégrer jusqu'à ce qu'il soit transporté par des extraterrestres et devienne l'élu pour être l'ambassadeur de la Terre, tandis que sa mère Olga travaille sur le projet top secret de décodage des messages extraterrestres.",
+    genres: ["Anime", "Adventure"],
+    releaseInfo: "2025",
+    imdbRating: "6.7",
+    stream: "https://pulse.topstrime.online/movie/1022787/su92dr/master.m3u8",
+    catalog: "disney"
+  },
   {
     id: "tt9140560",
     type: "series",
@@ -976,17 +1032,17 @@ const catalogData = [
 
   // === APPLE TV+ ===
   {
-    id: "tt6723592",
+    id: "tt35077924",
     type: "movie",
-    name: "Tenet",
-    poster: fetchPosterFromIMDb("tt6723592"),
-    background: fetchBackgroundFromIMDb("tt6723592"),
-    logo: fetchLogoFromIMDb("tt6723592"),
-    description: "Un agent secret reçoit une mission mystérieuse impliquant l'inversion temporelle pour prévenir la Troisième Guerre mondiale.",
-    genres: ["Action", "Sci-Fi", "Thriller"],
-    releaseInfo: "2020",
-    imdbRating: "7.3",
-    stream: "https://pulse.topstrime.online/movie/577922/82nb0j/master.m3u8",
+    name: "On ira",
+    poster: fetchPosterFromIMDb("tt35077924"),
+    background: fetchBackgroundFromIMDb("tt35077924"),
+    logo: fetchLogoFromIMDb("tt35077924"),
+    description: "Comédie dramatique sur le sujet délicat du suicide assisté. Marie, l'héroïne de 80 ans, est lassée de sa maladie. Elle part en Suisse avec des proches pour se faire euthanasier, mais leur ment sur l'objectif réel du voyage.",
+    genres: ["Comedy"],
+    releaseInfo: "2025",
+    imdbRating: "6.7",
+    stream: "https://pulse.topstrime.online/movie/1003504/i09w9p/master.m3u8",
     catalog: "appletv"
   },
   {
@@ -1062,17 +1118,17 @@ const catalogData = [
 
   // === HBO MAX ===
   {
-    id: "tt1375666",
+    id: "tt35705226",
     type: "movie",
-    name: "Inception",
-    poster: fetchPosterFromIMDb("tt1375666"),
-    background: fetchBackgroundFromIMDb("tt1375666"),
-    logo: fetchLogoFromIMDb("tt1375666"),
-    description: "Un voleur qui s'introduit dans les rêves pour voler des secrets se voit confier la mission inverse : implanter une idée.",
-    genres: ["Action", "Sci-Fi", "Thriller"],
-    releaseInfo: "2010",
-    imdbRating: "8.8",
-    stream: "https://pulse.topstrime.online/movie/27205/82nb0j/master.m3u8",
+    name: "Moon Le Panda",
+    poster: fetchPosterFromIMDb("tt35705226"),
+    background: fetchBackgroundFromIMDb("tt35705226"),
+    logo: fetchLogoFromIMDb("tt35705226"),
+    description: "Tian,12 ans est envoyé chez sa grand-mère en Chine à cause de ses mauvais résultats à l'école. Il se lie d'amitié en secret avec un panda qu'il nomme Moon. C'est le début d'une incroyable aventure qui va changer à tout jamais sa vie",
+    genres: ["Action", "Comedy"],
+    releaseInfo: "2025",
+    imdbRating: "5.3",
+    stream: "https://pulse.topstrime.online/movie/1178532/j7uu5w/master.m3u8",
     catalog: "hbo"
   },
   {
