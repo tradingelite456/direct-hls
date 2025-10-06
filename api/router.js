@@ -1,4 +1,9 @@
 // api/router.js
+import { getTMDBMetadata, getEpisodeOverview } from './tmdb.js';
+
+// === Cache ===
+const metadataCache = new Map();
+const episodeCache = new Map();
 
 // === Helpers ===
 function sendJSON(res, obj, status = 200) {
@@ -547,10 +552,6 @@ const catalogData = [
     poster: fetchPosterFromIMDb("tt35300972"),
     background: fetchBackgroundFromIMDb("tt35300972"),
     logo: fetchLogoFromIMDb("tt35300972"),
-    description: "Lorsque sa fiancée le jette sur l'autel pour son ex, un jeune homme n'a d'autre choix que de partir en lune de miel romantique avec sa mère.",
-    genres: ["Comedy"],
-    releaseInfo: "2025",
-    imdbRating: "5.6",
     stream: "https://pulse.topstrime.online/movie/1361622/o4rzet/master.m3u8",
     catalog: "netflix"
   },
@@ -561,103 +562,63 @@ const catalogData = [
     poster: fetchPosterFromIMDb("tt13443470"),
     background: fetchBackgroundFromIMDb("tt13443470"),
     logo: fetchLogoFromIMDb("tt13443470"),
-    description: "Suit les années d'études de Mercredi Addams, alors qu'elle tente de maîtriser ses nouvelles capacités psychiques, de déjouer et de résoudre le mystère qui a impliqué ses parents.",
-    genres: ["Action", "Comedy", "Fantastic"],
-    releaseInfo: "2022-",
-    imdbRating: "8.0",
     catalog: "netflix",
     episodes: {
       1: [
         {
           id: "tt13443470:1:1",
-          title: "Mercredi",
           season: 1,
           episode: 1,
-          overview: "Lorsqu'une farce délicieusement méchante fait renvoyer Mercredi, ses parents l'envoient à l'Académie Nevermore, le pensionnat où ils sont tombés amoureux.",
-          released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 1),
           stream: "https://pulse.topstrime.online/tv/119051/rdxfvx/S1/E1/master.m3u8"
         },
         {
           id: "tt13443470:1:2",
-          title: "Mercredi",
           season: 1,
           episode: 2,
-          overview: "Le shérif interroge Mercredi sur les événements étranges de la nuit. Plus tard, Mercredi est confronté à un rival féroce dans la course à la Poe Cup.",
-          released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 2),
           stream: "https://pulse.topstrime.online/tv/119051/rblyo2/S1/E2/master.m3u8"
         },
         {
           id: "tt13443470:1:3",
-          title: "Mercredi",
           season: 1,
           episode: 3,
-          overview: "Mercredi découvre par hasard une société secrète. Pendant la journée de sensibilisation, les exclus de Nevermore se mêlent aux normies de Jéricho dans le monde des pèlerins.",
-          released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 3),
           stream: "https://pulse.topstrime.online/tv/119051/v3vqw4/S1/E3/master.m3u8"
         },
         {
           id: "tt13443470:1:4",
-          title: "Mercredi",
           season: 1,
           episode: 4,
-          overview: "Mercredi invite Xavier au bal de la Rave'N, suscitant la jalousie de Tyler - mais la Chose a quelque chose dans sa manche. Pendant ce temps, Eugène surveille la grotte.",
-          released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 4),
           stream: "https://pulse.topstrime.online/tv/119051/y080h1/S1/E4/master.m3u8"
         },
         {
           id: "tt13443470:1:5",
-          title: "Mercredi",
           season: 1,
           episode: 5,
-          overview: "Pendant le week-end des parents, Mercredi fouille dans le passé de sa famille - et fait accidentellement arrêter son père. Enid ressent la pression de devenir un loup.",
-          released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 5),
           stream: "https://pulse.topstrime.online/tv/119051/feqros/S1/E5/master.m3u8"
         },
         {
           id: "tt13443470:1:6",
-          title: "Mercredi",
           season: 1,
           episode: 6,
-          overview: "Les amis de Mercredi lui organisent une fête d'anniversaire surprise. Ils veulent bien faire, mais elle préférerait marquer cette triste occasion en résolvant les meurtres.",
-          released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 6),
           stream: "https://pulse.topstrime.online/tv/119051/4f0xlr/S1/E6/master.m3u8"
         },
         {
           id: "tt13443470:1:7",
-          title: "Mercredi",
           season: 1,
           episode: 7,
-          overview: "L'excentrique oncle Fester lui rend visite et partage sa théorie sur le monstre. Mercredi accepte à contrecoeur un rendez-vous avec Tyler dans la crypte de Crackstone.",
-          released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 7),
           stream: "https://pulse.topstrime.online/tv/119051/lt5pvl/S1/E7/master.m3u8"
         },
         {
           id: "tt13443470:1:8",
-          title: "Mercredi",
           season: 1,
           episode: 8,
-          overview: "Mercredi a des ennuis avec le principal Weems, mais ce n'est que le début de ses problèmes. Pour combattre un mal ancien, elle aura besoin de l'aide de tous ses amis.",
-          released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 8),
           stream: "https://pulse.topstrime.online/tv/119051/cya5bi/S1/E8/master.m3u8"
         }
       ],
   2: [
     {
       id: "tt13443470:2:1",
-      title: "Mercredi",
       season: 2,
       episode: 1,
-      overview: "Après des vacances d'été productives, une Mercredi maussade retrouve Nevermore, auréolée malgré elle du statut d'héroïne et cible d'un regard malveillant et harceleur.",
-      released: "2025-08-06T00:00:00.000Z",
-      thumbnail: fetchEpisodeThumbnail("tt13443470", 2, 1),
       stream: "https://pulse.topstrime.online/tv/119051/zfm5xe/S2/E1/master.m3u8"
     }
      ]
@@ -672,10 +633,6 @@ const catalogData = [
     poster: fetchPosterFromIMDb("tt1877830"),
     background: fetchBackgroundFromIMDb("tt1877830"),
     logo: fetchLogoFromIMDb("tt1877830"),
-    description: "Lorsque le Riddler, un tueur sadique, commence à assassiner des personnalités politiques clés de Gotham, Batman est contraint d'enquêter sur la corruption de la ville.",
-    genres: ["Action", "Crime", "Drama"],
-    releaseInfo: "2022",
-    imdbRating: "7.8",
     stream: "https://pulse.topstrime.online/movie/414906/82nb0j/master.m3u8",
     catalog: "prime"
   },
@@ -686,21 +643,13 @@ const catalogData = [
     poster: fetchPosterFromIMDb("tt0944947"),
     background: fetchBackgroundFromIMDb("tt0944947"),
     logo: fetchLogoFromIMDb("tt0944947"),
-    description: "Neuf familles nobles se battent pour le contrôle des terres mythiques de Westeros, tandis qu'un ancien ennemi revient après avoir été endormi pendant des millénaires.",
-    genres: ["Action", "Adventure", "Drama"],
-    releaseInfo: "2011-2019",
-    imdbRating: "9.2",
     catalog: "prime",
     episodes: {
       1: [
         {
           id: "tt0944947:1:1",
-          title: "Winter Is Coming",
           season: 1,
           episode: 1,
-          overview: "Eddard Stark est déchiré entre sa famille et un vieil ami lorsqu'on lui demande de servir à la cour du roi Robert Baratheon.",
-          released: "2011-04-17T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt0944947", 1, 1),
           stream: "https://pulse.topstrime.online/tv/1399/1/1/82nb0j/master.m3u8"
         }
       ]
@@ -715,10 +664,6 @@ const catalogData = [
     poster: fetchPosterFromIMDb("tt20969586"),
     background: fetchBackgroundFromIMDb("tt20969586"),
     logo: fetchLogoFromIMDb("tt20969586"),
-    description: "Un monde sans Avengers ne signifie pas qu'il n'y a pas de groupe de super-héros. Il y a un groupe et ils s'appellent les Thunderbolts.",
-    genres: ["Action", "Adventure", "Fantasy"],
-    releaseInfo: "2025",
-    imdbRating: "7.1",
     stream: "https://pulse.topstrime.online/movie/986056/82nb0j/master.m3u8",
     catalog: "disney"
   },
@@ -729,21 +674,13 @@ const catalogData = [
     poster: fetchPosterFromIMDb("tt9140560"),
     background: fetchBackgroundFromIMDb("tt9140560"),
     logo: fetchLogoFromIMDb("tt9140560"),
-    description: "Série mêlant sitcoms classiques et univers cinématographique Marvel dans laquelle Wanda Maximoff et Vision vivent une vie de banlieue idyllique.",
-    genres: ["Action", "Comedy", "Drama"],
-    releaseInfo: "2021",
-    imdbRating: "7.9",
     catalog: "disney",
     episodes: {
       1: [
         {
           id: "tt9140560:1:1",
-          title: "Filmed Before a Live Studio Audience",
           season: 1,
           episode: 1,
-          overview: "Wanda et Vision s'installent dans leur nouvelle maison.",
-          released: "2021-01-15T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt9140560", 1, 1),
           stream: "https://pulse.topstrime.online/tv/85271/1/1/82nb0j/master.m3u8"
         }
       ]
@@ -758,10 +695,6 @@ const catalogData = [
     poster: fetchPosterFromIMDb("tt6723592"),
     background: fetchBackgroundFromIMDb("tt6723592"),
     logo: fetchLogoFromIMDb("tt6723592"),
-    description: "Un agent secret reçoit une mission mystérieuse impliquant l'inversion temporelle pour prévenir la Troisième Guerre mondiale.",
-    genres: ["Action", "Sci-Fi", "Thriller"],
-    releaseInfo: "2020",
-    imdbRating: "7.3",
     stream: "https://pulse.topstrime.online/movie/577922/82nb0j/master.m3u8",
     catalog: "appletv"
   },
@@ -772,21 +705,13 @@ const catalogData = [
     poster: fetchPosterFromIMDb("tt10234724"),
     background: fetchBackgroundFromIMDb("tt10234724"),
     logo: fetchLogoFromIMDb("tt10234724"),
-    description: "Un entraîneur de football américain est embauché pour diriger une équipe de football britannique, malgré son absence totale d'expérience.",
-    genres: ["Comedy", "Drama", "Sport"],
-    releaseInfo: "2020-2023",
-    imdbRating: "8.8",
     catalog: "appletv",
     episodes: {
       1: [
         {
           id: "tt10234724:1:1",
-          title: "Pilot",
           season: 1,
           episode: 1,
-          overview: "Ted Lasso, un entraîneur de football américain, arrive en Angleterre pour diriger un club de football.",
-          released: "2020-08-14T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt10234724", 1, 1),
           stream: "https://pulse.topstrime.online/tv/97546/1/1/82nb0j/master.m3u8"
         }
       ]
@@ -801,10 +726,6 @@ const catalogData = [
     poster: fetchPosterFromIMDb("tt1160419"),
     background: fetchBackgroundFromIMDb("tt1160419"),
     logo: fetchLogoFromIMDb("tt1160419"),
-    description: "Paul Atreides, jeune homme aussi doué que brillant, est destiné à connaître un destin hors du commun.",
-    genres: ["Action", "Adventure", "Drama"],
-    releaseInfo: "2021",
-    imdbRating: "8.0",
     stream: "https://pulse.topstrime.online/movie/438631/82nb0j/master.m3u8",
     catalog: "canal"
   },
@@ -815,21 +736,13 @@ const catalogData = [
     poster: fetchPosterFromIMDb("tt2861424"),
     background: fetchBackgroundFromIMDb("tt2861424"),
     logo: fetchLogoFromIMDb("tt2861424"),
-    description: "Un génie alcoolique et son petit-fils pas très futé embarquent dans des aventures inter-dimensionnelles.",
-    genres: ["Animation", "Adventure", "Comedy"],
-    releaseInfo: "2013-",
-    imdbRating: "9.1",
     catalog: "canal",
     episodes: {
       1: [
         {
           id: "tt2861424:1:1",
-          title: "Pilot",
           season: 1,
           episode: 1,
-          overview: "Rick emmène Morty dans une aventure inter-dimensionnelle.",
-          released: "2013-12-02T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt2861424", 1, 1),
           stream: "https://pulse.topstrime.online/tv/60625/1/1/82nb0j/master.m3u8"
         }
       ]
@@ -844,10 +757,6 @@ const catalogData = [
     poster: fetchPosterFromIMDb("tt1375666"),
     background: fetchBackgroundFromIMDb("tt1375666"),
     logo: fetchLogoFromIMDb("tt1375666"),
-    description: "Un voleur qui s'introduit dans les rêves pour voler des secrets se voit confier la mission inverse : implanter une idée.",
-    genres: ["Action", "Sci-Fi", "Thriller"],
-    releaseInfo: "2010",
-    imdbRating: "8.8",
     stream: "https://pulse.topstrime.online/movie/27205/82nb0j/master.m3u8",
     catalog: "hbo"
   },
@@ -858,21 +767,13 @@ const catalogData = [
     poster: fetchPosterFromIMDb("tt0903747"),
     background: fetchBackgroundFromIMDb("tt0903747"),
     logo: fetchLogoFromIMDb("tt0903747"),
-    description: "Un professeur de chimie atteint d'un cancer se lance dans la fabrication de méthamphétamine pour assurer l'avenir financier de sa famille.",
-    genres: ["Crime", "Drama", "Thriller"],
-    releaseInfo: "2008-2013",
-    imdbRating: "9.5",
     catalog: "hbo",
     episodes: {
       1: [
         {
           id: "tt0903747:1:1",
-          title: "Pilot",
           season: 1,
           episode: 1,
-          overview: "Walter White, professeur de chimie, apprend qu'il a un cancer du poumon.",
-          released: "2008-01-20T00:00:00.000Z",
-          thumbnail: fetchEpisodeThumbnail("tt0903747", 1, 1),
           stream: "https://pulse.topstrime.online/tv/1396/1/1/82nb0j/master.m3u8"
         }
       ]
@@ -1011,13 +912,14 @@ export default function handler(req, res) {
     let metas = [];
 
     if (catalogId === 'directhls_series') {
-      metas = catalogData
-        .filter(item => {
-          if (item.type !== 'series' || item.catalog) return false;
-          if (genreFilter && !item.genres.includes(genreFilter)) return false;
-          return true;
-        })
-        .map(item => ({
+      const filtered = catalogData.filter(item => {
+        if (item.type !== 'series' || item.catalog) return false;
+        if (genreFilter && item.genres && !item.genres.includes(genreFilter)) return false;
+        return true;
+      });
+
+      for (const item of filtered) {
+        metas.push({
           id: item.id,
           type: item.type,
           name: item.name,
@@ -1029,49 +931,80 @@ export default function handler(req, res) {
           logo: item.logo,
           releaseInfo: item.releaseInfo,
           imdbRating: item.imdbRating
-        }));
+        });
+      }
     } else if (catalogId.includes('_movies')) {
       const platform = catalogId.replace('_movies', '');
-      metas = catalogData
-        .filter(item => {
-          if (item.type !== 'movie' || item.catalog !== platform) return false;
-          if (genreFilter && !item.genres.includes(genreFilter)) return false;
-          return true;
-        })
-        .map(item => ({
+      const filtered = catalogData.filter(item => {
+        if (item.type !== 'movie' || item.catalog !== platform) return false;
+        return true;
+      });
+
+      for (const item of filtered) {
+        const cacheKey = `movie_${item.id}`;
+        let tmdbData = metadataCache.get(cacheKey);
+
+        if (!tmdbData) {
+          tmdbData = await getTMDBMetadata(item.id, 'movie');
+          if (tmdbData) {
+            metadataCache.set(cacheKey, tmdbData);
+          }
+        }
+
+        if (genreFilter && tmdbData?.genres && !tmdbData.genres.includes(genreFilter)) {
+          continue;
+        }
+
+        metas.push({
           id: item.id,
           type: item.type,
           name: item.name,
           poster: item.poster,
           posterShape: "regular",
-          description: item.description,
-          genres: item.genres,
+          description: tmdbData?.description || '',
+          genres: tmdbData?.genres || [],
           background: item.background,
           logo: item.logo,
-          releaseInfo: item.releaseInfo,
-          imdbRating: item.imdbRating
-        }));
+          releaseInfo: tmdbData?.releaseInfo || '',
+          imdbRating: tmdbData?.imdbRating || ''
+        });
+      }
     } else if (catalogId.includes('_series')) {
       const platform = catalogId.replace('_series', '');
-      metas = catalogData
-        .filter(item => {
-          if (item.type !== 'series' || item.catalog !== platform) return false;
-          if (genreFilter && !item.genres.includes(genreFilter)) return false;
-          return true;
-        })
-        .map(item => ({
+      const filtered = catalogData.filter(item => {
+        if (item.type !== 'series' || item.catalog !== platform) return false;
+        return true;
+      });
+
+      for (const item of filtered) {
+        const cacheKey = `series_${item.id}`;
+        let tmdbData = metadataCache.get(cacheKey);
+
+        if (!tmdbData) {
+          tmdbData = await getTMDBMetadata(item.id, 'series');
+          if (tmdbData) {
+            metadataCache.set(cacheKey, tmdbData);
+          }
+        }
+
+        if (genreFilter && tmdbData?.genres && !tmdbData.genres.includes(genreFilter)) {
+          continue;
+        }
+
+        metas.push({
           id: item.id,
           type: item.type,
           name: item.name,
           poster: item.poster,
           posterShape: "regular",
-          description: item.description,
-          genres: item.genres,
+          description: tmdbData?.description || '',
+          genres: tmdbData?.genres || [],
           background: item.background,
           logo: item.logo,
-          releaseInfo: item.releaseInfo,
-          imdbRating: item.imdbRating
-        }));
+          releaseInfo: tmdbData?.releaseInfo || '',
+          imdbRating: tmdbData?.imdbRating || ''
+        });
+      }
     }
 
     console.log('Sending catalog with', metas.length, 'items');
@@ -1092,23 +1025,63 @@ export default function handler(req, res) {
       return sendJSON(res, { meta: null }, 404);
     }
 
+    const isTeleReality = !item.catalog;
+    let tmdbMetadata = null;
+
+    if (!isTeleReality) {
+      const cacheKey = `${type}_${id}`;
+      if (metadataCache.has(cacheKey)) {
+        tmdbMetadata = metadataCache.get(cacheKey);
+      } else {
+        tmdbMetadata = await getTMDBMetadata(id, type);
+        if (tmdbMetadata) {
+          metadataCache.set(cacheKey, tmdbMetadata);
+        }
+      }
+    }
+
     if (item.type === 'series') {
       const videos = [];
 
-      Object.keys(item.episodes || {}).forEach(seasonNum => {
+      for (const seasonNum of Object.keys(item.episodes || {})) {
         const seasonEpisodes = item.episodes[seasonNum];
-        seasonEpisodes.forEach(episode => {
-          videos.push({
+        for (const episode of seasonEpisodes) {
+          let episodeData = {
             id: episode.id,
-            title: episode.title,
             season: episode.season,
             episode: episode.episode,
-            overview: episode.overview,
-            released: episode.released,
-            thumbnail: episode.thumbnail
-          });
-        });
-      });
+            thumbnail: episode.thumbnail || fetchEpisodeThumbnail(id, episode.season, episode.episode)
+          };
+
+          if (isTeleReality) {
+            episodeData.title = episode.title;
+            episodeData.overview = episode.overview;
+            episodeData.released = episode.released;
+          } else {
+            const episodeCacheKey = `${id}_${seasonNum}_${episode.episode}`;
+            let episodeInfo = episodeCache.get(episodeCacheKey);
+
+            if (!episodeInfo) {
+              episodeInfo = await getEpisodeOverview(id, episode.season, episode.episode);
+              if (episodeInfo) {
+                episodeCache.set(episodeCacheKey, episodeInfo);
+              }
+            }
+
+            if (episodeInfo) {
+              episodeData.title = episodeInfo.title;
+              episodeData.overview = episodeInfo.overview;
+              episodeData.released = episodeInfo.released;
+            } else {
+              episodeData.title = `Épisode ${episode.episode}`;
+              episodeData.overview = '';
+              episodeData.released = null;
+            }
+          }
+
+          videos.push(episodeData);
+        }
+      }
 
       const meta = {
         id: item.id,
@@ -1117,10 +1090,10 @@ export default function handler(req, res) {
         poster: item.poster,
         background: item.background,
         logo: item.logo,
-        description: item.description,
-        genres: item.genres,
-        releaseInfo: item.releaseInfo,
-        imdbRating: item.imdbRating,
+        description: isTeleReality ? item.description : (tmdbMetadata?.description || item.description || ''),
+        genres: isTeleReality ? item.genres : (tmdbMetadata?.genres || item.genres || []),
+        releaseInfo: isTeleReality ? item.releaseInfo : (tmdbMetadata?.releaseInfo || item.releaseInfo || ''),
+        imdbRating: isTeleReality ? item.imdbRating : (tmdbMetadata?.imdbRating || item.imdbRating || ''),
         posterShape: "regular",
         videos: videos
       };
@@ -1135,10 +1108,10 @@ export default function handler(req, res) {
         poster: item.poster,
         background: item.background,
         logo: item.logo,
-        description: item.description,
-        genres: item.genres,
-        releaseInfo: item.releaseInfo,
-        imdbRating: item.imdbRating,
+        description: isTeleReality ? item.description : (tmdbMetadata?.description || item.description || ''),
+        genres: isTeleReality ? item.genres : (tmdbMetadata?.genres || item.genres || []),
+        releaseInfo: isTeleReality ? item.releaseInfo : (tmdbMetadata?.releaseInfo || item.releaseInfo || ''),
+        imdbRating: isTeleReality ? item.imdbRating : (tmdbMetadata?.imdbRating || item.imdbRating || ''),
         posterShape: "regular"
       };
 
