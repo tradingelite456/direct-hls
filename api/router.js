@@ -27,6 +27,10 @@ function fetchBackgroundFromIMDb(id) {
   return `https://images.metahub.space/background/medium/${id}/img`;
 }
 
+function fetchEpisodeThumbnail(seriesId, season, episode) {
+  return `https://images.metahub.space/episode/medium/${seriesId}/${season}/${episode}/img`;
+}
+
 // === Catalogue ===
 const catalogData = [
   {
@@ -571,7 +575,7 @@ const catalogData = [
           episode: 1,
           overview: "Lorsqu'une farce délicieusement méchante fait renvoyer Mercredi, ses parents l'envoient à l'Académie Nevermore, le pensionnat où ils sont tombés amoureux.",
           released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 1),
           stream: "https://pulse.topstrime.online/tv/119051/rdxfvx/S1/E1/master.m3u8"
         },
         {
@@ -581,7 +585,7 @@ const catalogData = [
           episode: 2,
           overview: "Le shérif interroge Mercredi sur les événements étranges de la nuit. Plus tard, Mercredi est confronté à un rival féroce dans la course à la Poe Cup.",
           released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 2),
           stream: "https://pulse.topstrime.online/tv/119051/rblyo2/S1/E2/master.m3u8"
         },
         {
@@ -591,7 +595,7 @@ const catalogData = [
           episode: 3,
           overview: "Mercredi découvre par hasard une société secrète. Pendant la journée de sensibilisation, les exclus de Nevermore se mêlent aux normies de Jéricho dans le monde des pèlerins.",
           released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 3),
           stream: "https://pulse.topstrime.online/tv/119051/v3vqw4/S1/E3/master.m3u8"
         },
         {
@@ -601,7 +605,7 @@ const catalogData = [
           episode: 4,
           overview: "Mercredi invite Xavier au bal de la Rave'N, suscitant la jalousie de Tyler - mais la Chose a quelque chose dans sa manche. Pendant ce temps, Eugène surveille la grotte.",
           released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 4),
           stream: "https://pulse.topstrime.online/tv/119051/y080h1/S1/E4/master.m3u8"
         },
         {
@@ -611,7 +615,7 @@ const catalogData = [
           episode: 5,
           overview: "Pendant le week-end des parents, Mercredi fouille dans le passé de sa famille - et fait accidentellement arrêter son père. Enid ressent la pression de devenir un loup.",
           released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 5),
           stream: "https://pulse.topstrime.online/tv/119051/feqros/S1/E5/master.m3u8"
         },
         {
@@ -621,7 +625,7 @@ const catalogData = [
           episode: 6,
           overview: "Les amis de Mercredi lui organisent une fête d'anniversaire surprise. Ils veulent bien faire, mais elle préférerait marquer cette triste occasion en résolvant les meurtres.",
           released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 6),
           stream: "https://pulse.topstrime.online/tv/119051/4f0xlr/S1/E6/master.m3u8"
         },
         {
@@ -631,7 +635,7 @@ const catalogData = [
           episode: 7,
           overview: "L'excentrique oncle Fester lui rend visite et partage sa théorie sur le monstre. Mercredi accepte à contrecoeur un rendez-vous avec Tyler dans la crypte de Crackstone.",
           released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 7),
           stream: "https://pulse.topstrime.online/tv/119051/lt5pvl/S1/E7/master.m3u8"
         },
         {
@@ -641,7 +645,7 @@ const catalogData = [
           episode: 8,
           overview: "Mercredi a des ennuis avec le principal Weems, mais ce n'est que le début de ses problèmes. Pour combattre un mal ancien, elle aura besoin de l'aide de tous ses amis.",
           released: "2022-11-23T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt13443470"),
+          thumbnail: fetchEpisodeThumbnail("tt13443470", 1, 8),
           stream: "https://pulse.topstrime.online/tv/119051/cya5bi/S1/E8/master.m3u8"
         }
       ],
@@ -696,7 +700,7 @@ const catalogData = [
           episode: 1,
           overview: "Eddard Stark est déchiré entre sa famille et un vieil ami lorsqu'on lui demande de servir à la cour du roi Robert Baratheon.",
           released: "2011-04-17T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt0944947"),
+          thumbnail: fetchEpisodeThumbnail("tt0944947", 1, 1),
           stream: "https://pulse.topstrime.online/tv/1399/1/1/82nb0j/master.m3u8"
         }
       ]
@@ -739,7 +743,7 @@ const catalogData = [
           episode: 1,
           overview: "Wanda et Vision s'installent dans leur nouvelle maison.",
           released: "2021-01-15T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt9140560"),
+          thumbnail: fetchEpisodeThumbnail("tt9140560", 1, 1),
           stream: "https://pulse.topstrime.online/tv/85271/1/1/82nb0j/master.m3u8"
         }
       ]
@@ -782,7 +786,7 @@ const catalogData = [
           episode: 1,
           overview: "Ted Lasso, un entraîneur de football américain, arrive en Angleterre pour diriger un club de football.",
           released: "2020-08-14T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt10234724"),
+          thumbnail: fetchEpisodeThumbnail("tt10234724", 1, 1),
           stream: "https://pulse.topstrime.online/tv/97546/1/1/82nb0j/master.m3u8"
         }
       ]
@@ -825,7 +829,7 @@ const catalogData = [
           episode: 1,
           overview: "Rick emmène Morty dans une aventure inter-dimensionnelle.",
           released: "2013-12-02T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt2861424"),
+          thumbnail: fetchEpisodeThumbnail("tt2861424", 1, 1),
           stream: "https://pulse.topstrime.online/tv/60625/1/1/82nb0j/master.m3u8"
         }
       ]
@@ -868,7 +872,7 @@ const catalogData = [
           episode: 1,
           overview: "Walter White, professeur de chimie, apprend qu'il a un cancer du poumon.",
           released: "2008-01-20T00:00:00.000Z",
-          thumbnail: fetchPosterFromIMDb("tt0903747"),
+          thumbnail: fetchEpisodeThumbnail("tt0903747", 1, 1),
           stream: "https://pulse.topstrime.online/tv/1396/1/1/82nb0j/master.m3u8"
         }
       ]
