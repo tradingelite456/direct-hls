@@ -516,6 +516,16 @@ const catalogData = [
           released: "2025-10-10T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-46-du-10-octobre-2025-45780109-1759734302-4d108a-1de1bb-0@3x.jpg",
           stream: "https://polite-pegasus-9899bd.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:47",
+          title: "Épisode 47",
+          season: 10,
+          episode: 47,
+          overview: "Épisode 47 de la saison 10",
+          released: "2025-10-11T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-47-du-13-octobre-2025-31971403-1759734313-399be4-886461-0@3x.jpg",
+          stream: "https://legendary-starship-ec9b9c.netlify.app/master.m3u8"
         }
       ]
     }
