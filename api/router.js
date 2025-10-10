@@ -526,6 +526,16 @@ const catalogData = [
           released: "2025-10-11T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-47-du-13-octobre-2025-31971403-1759734313-399be4-886461-0@3x.jpg",
           stream: "https://legendary-starship-ec9b9c.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:48",
+          title: "Épisode 48",
+          season: 10,
+          episode: 48,
+          overview: "Épisode 48 de la saison 10",
+          released: "2025-10-12T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-48-du-14-octobre-2025-27910182-1759734340-08239a-5bf323-0@3x.jpg",
+          stream: "https://thriving-eclair-9a6b81.netlify.app/master.m3u8"
         }
       ]
     }
