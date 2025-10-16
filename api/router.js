@@ -546,6 +546,16 @@ const catalogData = [
           released: "2025-10-17T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-51-du-17-octobre-2025-56689452-1760341493-14554b-21892f-0@3x.jpg",
           stream: "https://zingy-parfait-cf29f2.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:52",
+          title: "Épisode 52",
+          season: 10,
+          episode: 52,
+          overview: "Épisode 52 de la saison 10",
+          released: "2025-10-19T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-52-du-20-octobre-2025-98242842-1760341628-3f67d2-09c63c-0@3x.jpg",
+          stream: "https://warm-entremet-a7a0df.netlify.app/master.m3u8"
         }
       ]
     }
