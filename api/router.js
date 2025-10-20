@@ -564,8 +564,18 @@ const catalogData = [
           episode: 53,
           overview: "Épisode 53 de la saison 10",
           released: "2025-10-20T00:00:00.000Z",
-          thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-52-du-20-octobre-2025-98242842-1760341628-3f67d2-09c63c-0@3x.jpg",
+          thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-53-du-21-octobre-2025-54944996-1760517199-e852fb-d14ec9-0@3x.jpg",
           stream: "https://dazzling-heliotrope-d218e9.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:54",
+          title: "Épisode 54",
+          season: 10,
+          episode: 54,
+          overview: "Épisode 54 de la saison 10",
+          released: "2025-10-24T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-54-du-22-octobre-2025-99473696-1760599682-7416a4-2ba6cf-0@3x.jpg",
+          stream: "https://poetic-cendol-6fcb8a.netlify.app/master.m3u8"
         }
       ]
     }
