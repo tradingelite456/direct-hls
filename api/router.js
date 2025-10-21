@@ -576,6 +576,16 @@ const catalogData = [
           released: "2025-10-24T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-53-du-21-octobre-2025-54944996-1760517199-e852fb-d14ec9-0@3x.jpg",
           stream: "https://poetic-cendol-6fcb8a.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:55",
+          title: "Épisode 55",
+          season: 10,
+          episode: 55,
+          overview: "Épisode 55 de la saison 10",
+          released: "2025-10-25T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-55-du-23-octobre-2025-30327074-1760687201-9da537-8dc065-0@3x.jpg",
+          stream: "https://incomparable-nasturtium-ea472d.netlify.app/master.m3u8"
         }
       ]
     }
