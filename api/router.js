@@ -616,6 +616,16 @@ const catalogData = [
           released: "2025-10-28T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/avant-premiere-la-villa-saison-10-episode-58-du-28-octobre-2025-21265064-1760967518-e1e562-770c2b-0@3x.jpg",
           stream: "https://singular-kitsune-fea974.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:59",
+          title: "Épisode 59",
+          season: 10,
+          episode: 59,
+          overview: "Épisode 59 de la saison 10",
+          released: "2025-10-29T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/villa-59-0c988b-0c3ef6-0@3x.jpg",
+          stream: "https://polite-medovik-7cca10.netlify.app/master.m3u8"
         }
       ]
     }
