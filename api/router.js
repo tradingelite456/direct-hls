@@ -626,6 +626,16 @@ const catalogData = [
           released: "2025-10-29T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/villa-59-0c988b-0c3ef6-0@3x.jpg",
           stream: "https://polite-medovik-7cca10.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:60",
+          title: "Épisode 60",
+          season: 10,
+          episode: 60,
+          overview: "Épisode 60 de la saison 10",
+          released: "2025-10-30T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/villa-60-25b103-4f9437-0@3x.jpg",
+          stream: "https://incandescent-gecko-2b35cc.netlify.app/master.m3u8"
         }
       ]
     }
