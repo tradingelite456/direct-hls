@@ -636,6 +636,16 @@ const catalogData = [
           released: "2025-10-30T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/villa-60-25b103-4f9437-0@3x.jpg",
           stream: "https://incandescent-gecko-2b35cc.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:61",
+          title: "Épisode 61",
+          season: 10,
+          episode: 61,
+          overview: "Épisode 61 de la saison 10",
+          released: "2025-10-31T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/villa-61-6194e3-f967cc-0@3x.jpg",
+          stream: "https://chimerical-moxie-7339a5.netlify.app/master.m3u8"
         }
       ]
     }
