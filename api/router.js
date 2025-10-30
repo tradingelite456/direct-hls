@@ -724,6 +724,20 @@ const catalogData = [
     stream: "https://pulse.topstrime.online/movie/1361622/o4rzet/master.m3u8",
     catalog: "netflix"
   },
+   {
+    id: "tt13941852",
+    type: "movie",
+    name: "Permis de construire",
+    poster: fetchPosterFromIMDb("tt13941852"),
+    background: fetchBackgroundFromIMDb("tt13941852"),
+    logo: fetchLogoFromIMDb("tt13941852"),
+    description: "Un dentiste parisien qui, à la mort de son père, hérite d'un terrain et du devoir d'y faire construire une maison. La situation devient problématique lorsqu'il apprend que le terrain se situe en Corse.",
+    genres: ["Comedy"],
+    releaseInfo: "2021",
+    imdbRating: "5.4",
+    stream: "https://resonant-halva-93dfae.netlify.app/master.m3u8",
+    catalog: "netflix"
+  },
   {
     id: "tt3421514",
     type: "movie",
