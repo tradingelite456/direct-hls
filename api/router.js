@@ -646,6 +646,16 @@ const catalogData = [
           released: "2025-10-31T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/villa-61-6194e3-f967cc-0@3x.jpg",
           stream: "https://chimerical-moxie-7339a5.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:62",
+          title: "Épisode 62",
+          season: 10,
+          episode: 62,
+          overview: "Épisode 62 de la saison 10",
+          released: "2025-11-01T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/villa-62-1499b5-4ff351-0@3x.jpg",
+          stream: "https://eloquent-palmier-642662.netlify.app/master.m3u8"
         }
       ]
     }
