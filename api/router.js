@@ -656,6 +656,16 @@ const catalogData = [
           released: "2025-11-01T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/villa-62-1499b5-4ff351-0@3x.jpg",
           stream: "https://eloquent-palmier-642662.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:63",
+          title: "Épisode 63",
+          season: 10,
+          episode: 63,
+          overview: "Épisode 63 de la saison 10",
+          released: "2025-11-02T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/villa-63-c2b0be-e8361c-0@3x.jpg",
+          stream: "https://polite-stardust-337f38.netlify.app/master.m3u8"
         }
       ]
     }
