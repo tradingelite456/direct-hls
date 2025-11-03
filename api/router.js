@@ -666,6 +666,16 @@ const catalogData = [
           released: "2025-11-02T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/villa-63-c2b0be-e8361c-0@3x.jpg",
           stream: "https://polite-stardust-337f38.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:64",
+          title: "Épisode 64",
+          season: 10,
+          episode: 64,
+          overview: "Épisode 64 de la saison 10",
+          released: "2025-11-04T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/villa-64-528907-8689ff-0@3x.jpg",
+          stream: "https://kaleidoscopic-syrniki-28ab7e.netlify.app/master.m3u8"
         }
       ]
     }
