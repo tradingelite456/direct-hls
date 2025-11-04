@@ -1079,6 +1079,20 @@ const catalogData = [
   },
 
   // === AMAZON PRIME VIDEO ===
+   {
+    id: "tt9742794",
+    type: "movie",
+    name: "Braquage final",
+    poster: fetchPosterFromIMDb("tt9742794"),
+    background: fetchBackgroundFromIMDb("tt9742794"),
+    logo: fetchLogoFromIMDb("tt9742794"),
+    description: "Coupe du monde de football 2010. Un brillant étudiant britannique s'envole pour l'Espagne afin de mettre son plan à exécution à savoir cambrioler une banque ultra-protégée.",
+    genres: ["Drama"],
+    releaseInfo: "2021",
+    imdbRating: "6.4",
+    stream: "https://peaceful-kitten-c51bbd.netlify.app/master.m3u8",
+    catalog: "prime"
+  },
   {
     id: "tt34190272",
     type: "movie",
