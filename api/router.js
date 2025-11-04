@@ -731,7 +731,7 @@ const catalogData = [
 
   // === NETFLIX ===
   {
-    id: "tt35300972",
+    id: "tt32063098",
     type: "movie",
     name: "Ballad of a Small Player",
     poster: fetchPosterFromIMDb("tt32063098"),
@@ -742,6 +742,20 @@ const catalogData = [
     releaseInfo: "2025",
     imdbRating: "5.8",
     stream: "https://adorable-baklava-03c183.netlify.app/master.m3u8",
+    catalog: "netflix"
+  },
+  {
+    id: "tt27487473",
+    type: "movie",
+    name: "Le salaire de la peur",
+    poster: fetchPosterFromIMDb("tt27487473"),
+    background: fetchBackgroundFromIMDb("tt27487473"),
+    logo: fetchLogoFromIMDb("tt27487473"),
+    description: "Afin d'empêcher une explosion qui ferait des centaines de victimes, une équipe clandestine est formée pour transporter de la nitroglycérine à travers un désert parsemé de dangers.",
+    genres: ["Comedy"],
+    releaseInfo: "2025",
+    imdbRating: "4.6",
+    stream: "https://gleeful-mousse-242d60.netlify.app/master.m3u8",
     catalog: "netflix"
   },
   {
