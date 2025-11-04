@@ -733,6 +733,20 @@ const catalogData = [
   {
     id: "tt35300972",
     type: "movie",
+    name: "Ballad of a Small Player",
+    poster: fetchPosterFromIMDb("tt32063098"),
+    background: fetchBackgroundFromIMDb("tt32063098"),
+    logo: fetchLogoFromIMDb("tt32063098"),
+    description: "Lorsque son passé et ses dettes commencent à le rattraper, un joueur de haut niveau qui fait profil bas à Macao rencontre une âme sœur qui pourrait bien détenir la clé de son salut.",
+    genres: ["Comedy"],
+    releaseInfo: "2025",
+    imdbRating: "5.8",
+    stream: "https://adorable-baklava-03c183.netlify.app/master.m3u8",
+    catalog: "netflix"
+  },
+  {
+    id: "tt35300972",
+    type: "movie",
     name: "Lune de miel avec ma mère",
     poster: fetchPosterFromIMDb("tt35300972"),
     background: fetchBackgroundFromIMDb("tt35300972"),
