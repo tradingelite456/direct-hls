@@ -676,6 +676,16 @@ const catalogData = [
           released: "2025-11-04T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/villa-64-528907-8689ff-0@3x.jpg",
           stream: "https://kaleidoscopic-syrniki-28ab7e.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:65",
+          title: "Épisode 65",
+          season: 10,
+          episode: 65,
+          overview: "Épisode 65 de la saison 10",
+          released: "2025-11-05T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/villa-64-528907-8689ff-0@3x.jpg",
+          stream: "https://famous-smakager-6d756c.netlify.app/master.m3u8"
         }
       ]
     }
