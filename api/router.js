@@ -686,6 +686,16 @@ const catalogData = [
           released: "2025-11-05T00:00:00.000Z",
           thumbnail: "https://photos.tf1.fr/330/186/villa-64-528907-8689ff-0@3x.jpg",
           stream: "https://famous-smakager-6d756c.netlify.app/master.m3u8"
+        },
+         {
+          id: "ttseries_villa:10:66",
+          title: "Épisode 66",
+          season: 10,
+          episode: 66,
+          overview: "Épisode 66 de la saison 10",
+          released: "2025-11-07T00:00:00.000Z",
+          thumbnail: "https://photos.tf1.fr/330/186/2127793_test2-5896cd-de6b44-0@3x.jpg",
+          stream: "https://flourishing-zuccutto-b695d6.netlify.app/master.m3u8"
         }
       ]
     }
